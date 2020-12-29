@@ -1,0 +1,7 @@
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="ttyUSB_arduino"
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a8", SYMLINK+="ttyUSB_gps"
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="152a", ATTRS{idProduct}=="80c1", SYMLINK+="ttyUSB_BNOimu"
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2404", SYMLINK+="ttyUSB_roboclaw"
