@@ -1,0 +1,13 @@
+<!--
+
+    This .launch file is used to publish cmd_vel remotely through rf
+
+-->
+<launch>
+	<arg name="port" value="/dev/ttyUSB_arduino"/>
+	<arg name="baud" value="115200"/>
+
+	<include file="$(find bugcar_bringup)/launch/simple_twist_mux.launch" />
+	<node pkg="rosserial_python" type="serial_node.py" name="rc_node" output="screen" args="-port $(arg port) -baud $(arg baud)"/>
+
+</launch>
