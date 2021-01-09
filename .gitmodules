@@ -15,7 +15,7 @@
 	url = https://github.com/ros-drivers/rosserial.git
 [submodule "src/twist_mux"]
 	path = src/twist_mux
-	url = https://github.com/ros-teleop/twist_mux
+	url = https://github.com/anhquanvgu/twist_mux
 [submodule "src/mapviz"]
 	path = src/mapviz
 	url = https://github.com/swri-robotics/mapviz.git
