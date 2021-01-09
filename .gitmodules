@@ -1,9 +1,9 @@
 [submodule "src/bno055_usb/bno055_usb_stick"]
 	path = src/bno055_usb/bno055_usb_stick
-	url = https://github.com/yoshito-n-students/bno055_usb_stick
+	url = https://github.com/yoshito-n-students/bno055_usb_stick.git
 [submodule "src/bno055_usb/bno055_usb_stick_msgs"]
 	path = src/bno055_usb/bno055_usb_stick_msgs
-	url = https://github.com/yoshito-n-students/bno055_usb_stick_msgs
+	url = https://github.com/yoshito-n-students/bno055_usb_stick_msgs.git
 [submodule "src/roboclaw_ros"]
 	path = src/roboclaw_ros
 	url = https://github.com/uweswrtz/roboclaw_ros.git
@@ -12,10 +12,10 @@
 	url = https://github.com/KumarRobotics/ublox.git
 [submodule "src/rosserial"]
 	path = src/rosserial
-	url = https://github.com/ros-drivers/rosserial.git
+	url = https://github.com/anhquanvgu/rosserial.git
 [submodule "src/twist_mux"]
 	path = src/twist_mux
-	url = https://github.com/anhquanvgu/twist_mux
+	url = https://github.com/anhquanvgu/twist_mux.git
 [submodule "src/mapviz"]
 	path = src/mapviz
 	url = https://github.com/swri-robotics/mapviz.git
