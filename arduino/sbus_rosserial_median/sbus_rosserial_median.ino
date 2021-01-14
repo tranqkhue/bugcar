@@ -120,8 +120,8 @@ void loop() {
       }
 
       else if (abs(switch_1 - stop_threshold) < 250 && abs(switch_2 - stop_threshold) < 250) {
-        cmd_vel.linear.x  = 0;
-        cmd_vel.angular.z = 0;
+        vel_forward  = 0;
+        angular_speed = 0;
         rc_cmd.publish(&cmd_vel);
 
       }

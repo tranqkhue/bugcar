@@ -4,7 +4,7 @@
 
 -->
 <launch>
-	<arg name="port" value="/dev/ttyUSB0"/>
+	<arg name="port" value="/dev/ttyUSB_arduino"/>
 	<arg name="baud" value="115200"/>
 
 	<include file="$(find bugcar_bringup)/launch/simple_twist_mux.launch" />
