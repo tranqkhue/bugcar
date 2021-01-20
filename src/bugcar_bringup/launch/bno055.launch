@@ -10,10 +10,12 @@
 
 	<node pkg="bno055_usb_stick" type="bno055_usb_stick_node" name="bno055_node">
 		<param name="port" value="$(arg port)" />
-		<param name="topic" value="$(arg topic)"/>
+		<remap from="/imu" to="$(arg topic)"/>
 		<!-- VERY IMPORTANT PARAMS 
 		Do not change without consulting the owner(s) of this repo -->
 		<param name="publish_tf" value="false" />
+		<param name="~frame_id" value="base_link" />
+
 	</node>	
 
 </launch>

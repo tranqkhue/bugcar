@@ -9,10 +9,10 @@ topics:
 -
   name    : auto navigation
   topic   : move_base/cmd_vel
-  timeout : 0.5
+  timeout : 0.1
   priority: 10
 -
   name    : rc navigation
   topic   : rc_controller/cmd_vel
-  timeout : 0.5
+  timeout : 0.2
   priority: 100

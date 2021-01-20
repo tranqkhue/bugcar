@@ -22,6 +22,8 @@
         <param name="~max_speed" value="$(arg max_speed)"/>
         <param name="~ticks_per_meter" value="$(arg ticks_per_meter)"/>
         <param name="~base_width" value="$(arg base_width)"/>
+        <remap from="tf" to="roboclaw/tf"/>
+        <remap from="odom" to="odom/wheel"/>
     </node>
 
 </launch>
