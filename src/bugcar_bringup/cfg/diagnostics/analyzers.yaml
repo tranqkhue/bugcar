@@ -1,0 +1,29 @@
+analyzers:
+  localization:
+    type: AnalyzerGroup
+    path: Localization
+    analyzers:
+      odom_baselink:
+        type: GenericAnalyzer
+        path: OdomEKF
+        timeout: 2.0
+        contains: 'odom_ekf'
+
+      map_baselink:
+        type: GenericAnalyzer
+        path: MapEKF
+        timeout: 2.0
+        contains: 'map_ekf'
+
+  twist_mux:
+    type: GenericAnalyzer
+    path: TwistMux
+    timeout: 5.0
+    contains: 'twist_mux'
+
+  motor_driver:
+    type: GenericAnalyzer
+    path: RobotClaw
+    timeout: 2.0
+    contains: 'roboclaw_node'
+

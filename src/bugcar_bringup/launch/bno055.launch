@@ -1,0 +1,21 @@
+<!--
+
+    This .launch file is used to run BNO055 Usb stick driver and publish imu data
+
+-->
+
+<launch>
+	<arg name="port" value="/dev/ttyUSB_BNOimu"/>
+	<arg name="topic" value="/imu/data"/>
+
+	<node pkg="bno055_usb_stick" type="bno055_usb_stick_node" name="bno055_node">
+		<param name="port" value="$(arg port)" />
+		<remap from="/imu" to="$(arg topic)"/>
+		<!-- VERY IMPORTANT PARAMS 
+		Do not change without consulting the owner(s) of this repo -->
+		<param name="publish_tf" value="false" />
+		<param name="~frame_id" value="base_link" />
+
+	</node>	
+
+</launch>

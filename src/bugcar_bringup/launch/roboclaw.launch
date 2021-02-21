@@ -1,0 +1,29 @@
+<!--
+    
+    This .launch file is used to initialize the roboclaw motor driver which accepts standard ROS cmd_vel and reports odometry data used in localization operation
+
+-->
+<launch>
+
+    <arg name="port" value="/dev/ttyUSB_roboclaw"/>
+    <arg name="baud" value="115200"/>
+    <arg name="address" value="128"/>
+    
+    <!-- VERY IMPORTANT PARAMS 
+    Do not change without consulting the owner(s) of this repo -->
+    <arg name="max_speed" value="2"/>
+    <arg name="ticks_per_meter" value="2000"/>
+    <arg name="base_width" value="0.450"/>
+
+    <node pkg="roboclaw_node" type="roboclaw_node.py" name="roboclaw_node" output="screen">
+        <param name="~dev" value="$(arg port)"/>
+        <param name="~baud" value="$(arg baud)"/>
+        <param name="~address" value="$(arg address)"/>
+        <param name="~max_speed" value="$(arg max_speed)"/>
+        <param name="~ticks_per_meter" value="$(arg ticks_per_meter)"/>
+        <param name="~base_width" value="$(arg base_width)"/>
+        <remap from="tf" to="roboclaw/tf"/>
+        <remap from="odom" to="odom/wheel"/>
+    </node>
+
+</launch>

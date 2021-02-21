@@ -1,0 +1,18 @@
+<!--
+	This .launch file is used to launch all sensors related to localization
+-->
+
+<launch>
+	 <!-- UBLOX_GPS -->
+    <include file="$(find bugcar_bringup)/launch/single_gps.launch" />
+	
+    <!-- ROBOCLAW_MOTOR_DRIVER -->
+    <include file="$(find bugcar_bringup)/launch/roboclaw.launch"/>
+
+    <!-- BNO055 -->
+    <include file="$(find bugcar_bringup)/launch/bno055.launch"/>
+
+    <!-- RX rc controller -->
+    <include file="$(find bugcar_bringup)/launch/rc_only.launch"/>
+
+</launch>
